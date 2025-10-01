@@ -5,7 +5,7 @@
 .. image:: https://github.com/elias-utf8/qcaml/blob/main/docs/images/qcaml_banner.jpg
    :align: center
    :alt: QCaml logo
-   :width: 400px
+   :width: 350px
 
 .. class:: margin-top
 .. class:: centered
