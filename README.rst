@@ -1,4 +1,4 @@
-.. image:: https://raw.githubusercontent.com/elias-utf8/qcaml/main/qcaml_logo.svg
+.. image:: https://raw.githubusercontent.com/elias-utf8/qcaml/refs/heads/main/qcaml_logo.svg?token=GHSAT0AAAAAADMGMDIDORC4LT25CMAQ77KM2G5LDLQ
    :alt: QCaml logo
    :width: 60%
    :align: center
