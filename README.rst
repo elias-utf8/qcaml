@@ -5,8 +5,6 @@
 .. class:: margin-top
 .. class:: centered
 
-|
-
 QCaml
 =================
 |license|
