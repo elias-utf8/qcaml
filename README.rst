@@ -2,6 +2,11 @@
    :alt: Licensed under the Apache 2.0 license
    :target: https://github.com/elias-utf8/qcaml/blob/main/LICENSE
 
+.. image:: https://github.com/elias-utf8/qcaml/blob/main/docs/images/qcaml_banner.jpg
+   :align: center
+   :alt: QCaml logo
+   :width: 400px
+
 .. class:: margin-top
 .. class:: centered
 
