@@ -1,0 +1,14 @@
+(test
+ (name test_qubit)
+ (modules test_qubit)
+ (libraries qcaml alcotest))
+
+(test
+ (name test_gate)
+ (modules test_gate)
+ (libraries qcaml alcotest))
+
+(test
+ (name test_circuit)
+ (modules test_circuit)
+ (libraries qcaml alcotest))

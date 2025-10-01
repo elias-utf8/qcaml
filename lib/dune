@@ -1,0 +1,5 @@
+(library
+ (name quantum)
+ (public_name qcaml)
+ (libraries)
+ (modules qubit gate circuit simulator measurement visualization))
