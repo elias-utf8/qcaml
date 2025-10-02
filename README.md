@@ -4,7 +4,7 @@
    Experimental cross-platform ocaml library for quantum computing
    
    [![License](https://img.shields.io/badge/License-Apache%202.0-3c60b1.svg?logo=opensourceinitiative&logoColor=white&style=flat-square)](https://github.com/elias-utf8/qcaml/blob/main/LICENSE)
-   [![OCaml](https://img.shields.io/badge/OCaml-5.0+-ec6813.svg?style=flat-square&logo=ocaml&logoColor=white)](https://ocaml.org/)
+   [![OCaml](https://img.shields.io/badge/OCaml-4.13+-ec6813.svg?style=flat-square&logo=ocaml&logoColor=white)](https://ocaml.org/)
    
 </div>
 
