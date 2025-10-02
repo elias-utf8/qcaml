@@ -2,7 +2,7 @@
    :alt: Licensed under the Apache 2.0 license
    :target: https://github.com/elias-utf8/qcaml/blob/main/LICENSE
 
-.. image:: https://github.com/elias-utf8/qcaml/blob/main/docs/images/qcaml_banner.jpg
+.. image:: https://github.com/elias-utf8/qcaml/blob/main/docs/images/qcaml_banner.png
    :align: center
    :alt: QCaml logo
    :width: 350px
