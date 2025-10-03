@@ -15,7 +15,7 @@ QCaml for Quantum (O)Caml is an experimental library for simulating quantum algo
 
 ## Installation 
 ### Prerequisites
-You need the [opam](https://opam.ocaml.org/) package manager to install dune (build system) and odoc (documentation generator).
+You need the [opam](https://opam.ocaml.org/) package manager to install the OCaml build tools.
 ```sh
 $ sudo apt install opam   # debian/ubuntu
 $ opam init
