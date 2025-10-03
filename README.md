@@ -18,3 +18,4 @@ QCaml for Quantum (O)Caml is an experimental library for simulating quantum algo
 ## Usages
 
 ## Documentation
+To read the project documentation, please refer to the [wiki](https://github.com/elias-utf8/qcaml/wiki).
