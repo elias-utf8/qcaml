@@ -1,10 +1,10 @@
 <div align="center">
-   <img src="https://github.com/elias-utf8/qcaml/blob/main/docs/images/qcaml_banner.png" alt="QCaml logo" width="350"/>
- 
+   <img src="https://github.com/elias-utf8/qcaml/blob/main/assets/images/qcaml_banner.png" alt="QCaml logo" width="350"/>
+
    Experimental ocaml library for quantum computing
-   
+
    [![License](https://img.shields.io/badge/License-Apache%202.0-3c60b1.svg?logo=opensourceinitiative&logoColor=white&style=flat-square)](https://github.com/elias-utf8/qcaml/blob/main/LICENSE)
-   [![OCaml](https://img.shields.io/badge/OCaml-5.2-ec6813.svg?style=flat-square&logo=ocaml&logoColor=white)](https://ocaml.org/) 
+   [![OCaml](https://img.shields.io/badge/OCaml-5.2-ec6813.svg?style=flat-square&logo=ocaml&logoColor=white)](https://ocaml.org/)
 
 </div>
 
@@ -13,7 +13,7 @@ QCaml for Quantum (O)Caml is an experimental library for simulating quantum algo
 
 ## Features
 
-## Installation 
+## Installation
 ### Prerequisites
 You need the [opam](https://opam.ocaml.org/) package manager to install the OCaml build tools.
 ```sh
@@ -21,7 +21,7 @@ $ sudo apt install opam   # debian/ubuntu
 $ opam init
 $ opam switch create 5.2.0
 $ eval $(opam env)
-$ opam install dune odoc
+$ opam install dune odoc alcotest
 ```
 ### Build
 The following will clone the repository, build QCaml and install it into your opam.

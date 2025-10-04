@@ -6,42 +6,17 @@
   description : Implementation of qubits with quantum state representation and operations.
 *)
 
-(** Type complex with real and imaginary part *)
-type complex = {
-  re : float;
-  im : float;
-}
+(** Type representing a qubit *)
+type q
 
-(** Complex multiplication
-   @param c1 First complex number
-   @param c2 Second complex number
-   @return The product of c1 and c2
-*)
-val cmul : complex -> complex -> complex
+(** The qubit |0⟩ *)
+val zero : q
 
-(** Complex addition
-   @param c1 First complex number
-   @param c2 Second complex number
-   @return The sum of c1 and c2
-*)
-val cadd : complex -> complex -> complex
+(** The qubit |1⟩ *)
+val one : q
 
-(** Complex subtraction
-   @param c1 First complex number
-   @param c2 Second complex number
-   @return The difference of c1 and c2
+(** Print the values of a qubit
+    @param q The qubit to print
+    @return A string representation of the qubit
 *)
-val csub : complex -> complex -> complex
-
-(** Complex conjugate
-   @param c Complex number
-   @return The conjugate of c
-*)
-val cconj : complex -> complex
-
-(** Multiply complex by real scalar
-   @param r Real scalar
-   @param c Complex number
-   @return The product of r and c
-*)
-val cmul_scalar : float -> complex -> complex
+val print : q -> string
