@@ -24,16 +24,13 @@ jobs:
       - name: Setup OCaml
         uses: ocaml/setup-ocaml@v3
         with:
-          ocaml-compiler: 5.2.0
+          ocaml-compiler: 4.14.1
           opam-disable-sandboxing: true
       
       - name: Install dependencies
         run: |
           opam install . --deps-only --with-doc --yes
           opam install odoc --yes
-      
-      - name: Build project
-        run: opam exec -- dune build
       
       - name: Generate documentation
         run: opam exec -- dune build @doc
