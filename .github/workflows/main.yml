@@ -24,7 +24,7 @@ jobs:
       - name: Setup OCaml
         uses: ocaml/setup-ocaml@v3
         with:
-          ocaml-compiler: 4.14.1
+          ocaml-compiler: 5.2.1
           opam-disable-sandboxing: true
       
       - name: Install dependencies
