@@ -14,6 +14,6 @@
  (synopsis "QCaml is an experimental cross-platform ocaml library for quantum computing.")
  (description "Simulation of quantum circuits with qubits, gates, and measurements")
  (depends
-  (ocaml (>= 4.13.1))
+  (ocaml (>= 5.2))
   dune
   (alcotest :with-test)))

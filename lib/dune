@@ -2,4 +2,4 @@
  (name quantum)
  (public_name qcaml)
  (libraries)
- (modules qubit gate circuit simulator measurement visualization))
+ (modules qubit gate circuit simulator measurement visualization complex))

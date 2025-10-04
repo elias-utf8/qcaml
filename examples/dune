@@ -1,0 +1,4 @@
+(executable
+ (public_name examples_exe)
+ (name use_qubit)
+ (libraries quantum))
