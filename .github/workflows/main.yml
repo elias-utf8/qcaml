@@ -17,32 +17,32 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
+      
       - name: Setup OCaml
-        uses: ocaml/setup-ocaml@v2
+        uses: ocaml/setup-ocaml@v3
         with:
-          ocaml-compiler: 4.14.x
-
+          ocaml-compiler: 5.2.0
+          opam-disable-sandboxing: true
+      
       - name: Install dependencies
         run: |
-          opam install . --deps-only --with-doc
-          opam install odoc
-
+          opam install . --deps-only --with-doc --yes
+          opam install odoc --yes
+      
       - name: Build project
         run: opam exec -- dune build
-
+      
       - name: Generate documentation
         run: opam exec -- dune build @doc
-
+      
       - name: Prepare docs
         run: |
           mkdir -p _site
           cp -r _build/default/_doc/_html/* _site/
-
+      
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -54,7 +54,6 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}
-    
     steps:
       - name: Deploy to GitHub Pages
         id: deploy
