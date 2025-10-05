@@ -11,7 +11,7 @@
 
 (package
  (name qcaml)
- (synopsis "QCaml is an experimental cross-platform ocaml library for quantum computing.")
+ (synopsis "QCaml is an experimental ocaml library for quantum computing.")
  (description "Simulation of quantum circuits with qubits, gates, and measurements")
  (depends
   (ocaml (>= 5.2))
