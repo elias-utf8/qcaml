@@ -11,6 +11,7 @@
 ## Presentation
 QCaml for Quantum (O)Caml is an experimental library for simulating quantum algorithms. This library is currently under development. Among the MVP's features are qubit declaration, application of classical gates (H, X, CNOT), measurement, and visualization.
 
+**Status**: This library is currently in early development and the API may change significantly.
 ## Features
 
 ## Installation
@@ -32,7 +33,16 @@ $ opam install .
 $ dune build @doc # for local documentation (optional)
 ```
 
-## Usages
-
+## Quick start
+## Usages examples
 ## Documentation
-To read the project whole documentation, please refer to the [wiki](https://github.com/elias-utf8/qcaml/wiki).
+
+<p>
+   
+   To read the project whole documentation, please refer to the [wiki](https://github.com/elias-utf8/qcaml/wiki).
+</p>
+<p>
+
+   API Reference: Generated documentation at `_build/default/_doc/_html/index.html` (after running dune build @doc) or see [online documentation](
+elias-utf8.github.io/qcaml/ )
+</p>
