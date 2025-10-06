@@ -15,6 +15,12 @@ val zero : q
 (** The qubit |1⟩ *)
 val one : q
 
+(** Superposition |+⟩ *)
+val plus: q
+
+(** Superposition |-⟩ *)
+val minus: q
+
 (** Print the values of a qubit
     @param q The qubit to print
     @return A string representation of the qubit

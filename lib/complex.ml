@@ -18,7 +18,6 @@ let cadd c1 c2 =
 let csub c1 c2 =
   { re = c1.re -. c2.re;
     im = c1.im -. c2.im }
-
 let cconj c =
   { re = c.re;
     im = -. c.im }
