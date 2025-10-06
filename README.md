@@ -43,6 +43,5 @@ $ dune build @doc # for local documentation (optional)
 </p>
 <p>
 
-   API Reference: Generated documentation at `_build/default/_doc/_html/index.html` (after running dune build @doc) or see [online documentation](
-elias-utf8.github.io/qcaml/ )
+   API Reference: Generated documentation at `_build/default/_doc/_html/index.html` (after running dune build @doc) or see [online documentation](https://elias-utf8.github.io/qcaml/) )
 </p>
