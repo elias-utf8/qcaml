@@ -13,6 +13,13 @@ QCaml for Quantum (O)Caml is an experimental library for simulating quantum algo
 
 **Status**: This library is currently in early development and the API may change significantly.
 ## Features
+| Feature              | Status         |
+|----------------------|----------------|
+| Initialize qubit     | Done           |
+| Apply basic gates    | In Progress    |
+| Measurements         | To Do          |
+| Multi-qubit          | To Do          |
+| Circuit construction | To Do          |
 
 ## Installation
 ### Prerequisites
