@@ -13,13 +13,52 @@ QCaml for Quantum (O)Caml is an experimental library for simulating quantum algo
 
 **Status**: This library is currently in early development and the API may change significantly.
 ## Features
-| Feature              | Status         |
-|----------------------|----------------|
-| Initialize qubit     | Done           |
-| Apply basic gates    | In Progress    |
-| Measurements         | To Do          |
-| Multi-qubit          | To Do          |
-| Circuit construction | To Do          |
+<table>
+  <thead>
+    <tr>
+      <th width="35%">Feature</th>
+      <th width="20%">Status</th>
+      <th width="45%">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Qubit Initialization</strong></td>
+      <td><span>✓ Completed</span></td>
+      <td>Single and multi-qubit state initialization with arbitrary amplitudes</td>
+    </tr>
+    <tr>
+      <td><strong>Basic Quantum Gates</strong></td>
+      <td><span>⚠ In Progress</span></td>
+      <td>Implementation of fundamental gates (Hadamard, Pauli-X/Y/Z, Phase, CNOT)</td>
+    </tr>
+    <tr>
+      <td><strong>Quantum Measurements</strong></td>
+      <td><span style="color: #6c757d;">○ Planned</span></td>
+      <td>Computational basis measurements with probability calculations</td>
+    </tr>
+    <tr>
+      <td><strong>Advanced Gate</strong></td>
+      <td><span>○ Planned</span></td>
+      <td>Extended gate set (Toffoli, SWAP, controlled gates, rotation gates)</td>
+    </tr>
+    <tr>
+      <td><strong>Multi-Qubit Operations</strong></td>
+      <td><span>○ Planned</span></td>
+      <td>Efficient tensor product operations for n-qubit systems</td>
+    </tr>
+    <tr>
+      <td><strong>Circuit Builder</strong></td>
+      <td><span>○ Planned</span></td>
+      <td>High-level API for composing and optimizing quantum circuits</td>
+    </tr>
+    <tr>
+      <td><strong>Circuit Visualization</strong></td>
+      <td><span>○ Planned</span></td>
+      <td>Export circuits to standard formats (QASM, diagram generation)</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Installation
 ### Prerequisites
