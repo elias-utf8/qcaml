@@ -12,6 +12,28 @@
 QCaml for Quantum (O)Caml is an experimental library for simulating quantum algorithms. This library is currently under development. Among the MVP's features are qubit declaration, application of classical gates (H, X, CNOT), measurement, and visualization.
 
 **Status**: This library is currently in early development and the API may change significantly.
+
+## Installation
+### Prerequisites
+You need the [opam](https://opam.ocaml.org/) package manager to install the OCaml build tools.
+```sh
+$ sudo apt install opam   # debian/ubuntu
+$ opam init
+$ opam switch create 5.2.0
+$ eval $(opam env)
+$ opam install dune odoc alcotest
+```
+### Build
+The following will clone the repository, build QCaml and install it into your opam.
+```sh
+$ git clone https://github.com/elias-utf8/qcaml.git
+$ cd qcaml/
+$ opam install .
+$ dune build @doc # for local documentation (optional)
+```
+
+## Quick start
+## Usages examples
 ## Features
 <table>
   <thead>
@@ -60,27 +82,6 @@ QCaml for Quantum (O)Caml is an experimental library for simulating quantum algo
   </tbody>
 </table>
 
-## Installation
-### Prerequisites
-You need the [opam](https://opam.ocaml.org/) package manager to install the OCaml build tools.
-```sh
-$ sudo apt install opam   # debian/ubuntu
-$ opam init
-$ opam switch create 5.2.0
-$ eval $(opam env)
-$ opam install dune odoc alcotest
-```
-### Build
-The following will clone the repository, build QCaml and install it into your opam.
-```sh
-$ git clone https://github.com/elias-utf8/qcaml.git
-$ cd qcaml/
-$ opam install .
-$ dune build @doc # for local documentation (optional)
-```
-
-## Quick start
-## Usages examples
 ## Documentation
 
 <p>
