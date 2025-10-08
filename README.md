@@ -23,7 +23,7 @@ $ opam switch create 5.2.0
 $ eval $(opam env)
 $ opam install dune odoc alcotest
 ```
-### Build
+### Build and install
 The following will clone the repository, build QCaml and install it into your opam.
 ```sh
 $ git clone https://github.com/elias-utf8/qcaml.git
