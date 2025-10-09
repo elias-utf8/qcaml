@@ -1,4 +1,4 @@
 (test
- (name test_qubit)
- (modules test_qubit)
+ (name test_complex)
+ (modules test_complex)
  (libraries qcaml alcotest))
