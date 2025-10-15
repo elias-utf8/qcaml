@@ -20,6 +20,12 @@ let minus = {
   beta  = { re = -.1.0 /. sqrt 2.0; im = 0.0 };
 }
 
+(** Alpha accessor *)
+let get_alpha q = q.alpha
+
+(** Beta accessor *)
+let get_beta q = q.beta
+
 let print q =
   Printf.sprintf "|ψ⟩ = (%.2f + %.2fi)|0⟩ + (%.2f + %.2fi)|1⟩"
     q.alpha.re q.alpha.im
