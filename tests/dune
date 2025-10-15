@@ -1,4 +1,9 @@
 (test
- (name test_qubit)
- (modules test_qubit)
- (libraries qcaml alcotest))
+ (name test_complex)
+ (modules test_complex)
+ (libraries quantum alcotest))
+
+ (test
+  (name test_qubit)
+  (modules test_qubit)
+  (libraries quantum alcotest))
