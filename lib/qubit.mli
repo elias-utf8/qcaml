@@ -21,6 +21,12 @@ val plus: q
 (** Superposition |-⟩ *)
 val minus: q
 
+(** Alpha accessor *)
+val get_alpha : q -> Complex.complex
+
+(** Beta accessor *)
+val get_beta : q -> Complex.complex
+
 (** Print the values of a qubit
     @param q The qubit to print
     @return A string representation of the qubit
