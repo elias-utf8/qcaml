@@ -30,6 +30,7 @@ $ git clone https://github.com/elias-utf8/qcaml.git
 $ cd qcaml/
 $ opam install .
 $ dune build @doc # for local documentation (optional)
+$ dune test # run tests (optional)
 ```
 
 ## Quick start
@@ -85,7 +86,7 @@ $ dune build @doc # for local documentation (optional)
 ## Documentation
 
 <p>
-   
+
    To read the project whole documentation, please refer to the [wiki](https://github.com/elias-utf8/qcaml/wiki).
 </p>
 <p>
