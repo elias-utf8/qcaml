@@ -1,6 +1,8 @@
 open Complex
 
-type q = { alpha : complex; beta : complex }
+type q = {
+  mutable alpha : complex;
+  mutable beta : complex }
 
 (** Qubit |0⟩ *)
 let zero = { alpha = Complex.one; beta = Complex.zero }

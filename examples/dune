@@ -1,4 +1,9 @@
 (executable
- (public_name examples_exe)
- (name use_qubit)
+ (public_name init_qubit_exe)
+ (name init_qubit)
+ (libraries quantum))
+
+(executable
+ (public_name apply_gate_exe)
+ (name apply_gate)
  (libraries quantum))
