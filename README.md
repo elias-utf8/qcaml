@@ -53,7 +53,7 @@ $ dune test # run tests (optional)
     <tr>
       <td><strong>Basic Quantum Gates</strong></td>
       <td><span>⚠ In Progress</span></td>
-      <td>Implementation of fundamental gates (Hadamard, Pauli-X/Y/Z, Phase, CNOT)</td>
+      <td>Implementation of fundamental gates (Hadamard, Pauli-X/Y/Z)</td>
     </tr>
     <tr>
       <td><strong>Quantum Measurements</strong></td>
@@ -63,7 +63,7 @@ $ dune test # run tests (optional)
     <tr>
       <td><strong>Advanced Gate</strong></td>
       <td><span>○ Planned</span></td>
-      <td>Extended gate set (Toffoli, SWAP, controlled gates, rotation gates)</td>
+      <td>Extended gate set (Phase, CNOT, Toffoli, SWAP, controlled gates, rotation gates)</td>
     </tr>
     <tr>
       <td><strong>Multi-Qubit Operations</strong></td>
