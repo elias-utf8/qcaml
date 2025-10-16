@@ -20,10 +20,10 @@ let minus = {
   beta  = { re = -.1.0 /. sqrt 2.0; im = 0.0 };
 }
 
-(** Alpha accessor *)
+(** Alpha getter *)
 let get_alpha q = q.alpha
 
-(** Beta accessor *)
+(** Beta getter *)
 let get_beta q = q.beta
 
 let print q =

@@ -21,10 +21,10 @@ val plus: q
 (** Superposition |-⟩ *)
 val minus: q
 
-(** Alpha accessor *)
+(** Alpha getter *)
 val get_alpha : q -> Complex.complex
 
-(** Beta accessor *)
+(** Beta getter *)
 val get_beta : q -> Complex.complex
 
 (** Print the values of a qubit
