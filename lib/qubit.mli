@@ -5,9 +5,10 @@
   license :     Apache-2.0
   description : Implementation of qubits with quantum state representation and operations.
 *)
+open Complex
 
 (** Type representing a qubit *)
-type q
+type q = { mutable alpha : complex; mutable beta : complex }
 
 (** The qubit |0⟩ *)
 val zero : q
