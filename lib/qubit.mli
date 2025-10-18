@@ -11,16 +11,16 @@ open Complex
 type q = { mutable alpha : complex; mutable beta : complex }
 
 (** The qubit |0⟩ *)
-val zero : q
+val zero : unit -> q
 
 (** The qubit |1⟩ *)
-val one : q
+val one : unit -> q
 
 (** Superposition |+⟩ *)
-val plus: q
+val plus : unit -> q
 
 (** Superposition |-⟩ *)
-val minus: q
+val minus : unit -> q
 
 (** Alpha getter *)
 val get_alpha : q -> Complex.complex

@@ -13,3 +13,17 @@ open Qubit
             [β']   [1·α + 0·β]   [α]
 *)
 val x : q -> unit
+
+(** Y gate
+    Matrice Y = [[0, -i], [i, 0]]
+    Result: [α'] = [0·α + i·β] = [i·β]
+            [β']   [(-i)·α + 0·β] = [-i·α]
+*)
+val y : q -> unit
+
+(** Z gate
+    Matrice Z = [[1, 0], [0, -1]]
+    Result: [α'] = [1·α + 0·β] = [α]
+            [β']   [0·α + (-1)·β] = [-β]
+*)
+val z : q -> unit

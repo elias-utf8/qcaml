@@ -7,6 +7,8 @@ let zero = { re = 0.0; im = 0.0 }
 
 let one = { re = 1.0; im = 0.0 }
 
+let minus_one = { re = -1.0; im = 0.0 }
+
 let cadd c1 c2 =
   { re = c1.re +. c2.re;
     im = c1.im +. c2.im }

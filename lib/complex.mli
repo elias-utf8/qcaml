@@ -18,6 +18,9 @@ val zero : complex
 (** One complex number *)
 val one : complex
 
+(** Minus one complex number *)
+val minus_one : complex
+
 (** Complex multiplication
 
   (a+ib)(c+id)=(ac−bd)+i(ad+bc)

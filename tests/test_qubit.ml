@@ -2,8 +2,9 @@ open Quantum.Qubit
 
 (** Test that qubit |0⟩ has correct amplitudes *)
 let test_zero () =
-  let alpha = get_alpha zero in
-  let beta = get_beta zero in
+  let q = zero () in
+  let alpha = get_alpha q in
+  let beta = get_beta q in
   Alcotest.(check (float 0.0001)) "alpha.re" 1.0 alpha.re;
   Alcotest.(check (float 0.0001)) "alpha.im" 0.0 alpha.im;
   Alcotest.(check (float 0.0001)) "beta.re" 0.0 beta.re;
@@ -11,8 +12,9 @@ let test_zero () =
 
 (** Test that qubit |1⟩ has correct amplitudes *)
 let test_one () =
-  let alpha = get_alpha one in
-  let beta = get_beta one in
+  let q = one () in
+  let alpha = get_alpha q in
+  let beta = get_beta q in
   Alcotest.(check (float 0.0001)) "alpha.re" 0.0 alpha.re;
   Alcotest.(check (float 0.0001)) "alpha.im" 0.0 alpha.im;
   Alcotest.(check (float 0.0001)) "beta.re" 1.0 beta.re;
@@ -20,12 +22,14 @@ let test_one () =
 
 (** Test print function for |0⟩ *)
 let test_zero_print () =
-  let s = print zero in
+  let q = zero () in
+  let s = print q in
   Alcotest.(check string) "print |0⟩" "|ψ⟩ = (1.00 + 0.00i)|0⟩ + (0.00 + 0.00i)|1⟩" s
 
 (** Test print function for |1⟩ *)
 let test_one_print () =
-  let s = print one in
+  let q = one () in
+  let s = print q in
   Alcotest.(check string) "print |1⟩" "|ψ⟩ = (0.00 + 0.00i)|0⟩ + (1.00 + 0.00i)|1⟩" s
 
 let () =

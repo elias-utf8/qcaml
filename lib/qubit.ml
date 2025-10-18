@@ -5,19 +5,19 @@ type q = {
   mutable beta : complex }
 
 (** Qubit |0⟩ *)
-let zero = { alpha = Complex.one; beta = Complex.zero }
+let zero ()= { alpha = Complex.one; beta = Complex.zero }
 
 (** Qubit |1⟩ *)
-let one = { alpha = Complex.zero; beta = Complex.one }
+let one () = { alpha = Complex.zero; beta = Complex.one }
 
 (** Superposition |+⟩ *)
-let plus = {
+let plus () = {
   alpha = { re = 1.0 /. sqrt 2.0; im = 0.0 };
   beta  = { re = 1.0 /. sqrt 2.0; im = 0.0 };
 }
 
 (** Superposition |-⟩ *)
-let minus = {
+let minus () = {
   alpha = { re = 1.0 /. sqrt 2.0; im = 0.0 };
   beta  = { re = -.1.0 /. sqrt 2.0; im = 0.0 };
 }
