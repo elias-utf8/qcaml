@@ -7,3 +7,8 @@
   (name test_qubit)
   (modules test_qubit)
   (libraries quantum alcotest))
+
+  (test
+   (name test_gate)
+   (modules test_gate)
+   (libraries quantum alcotest))
