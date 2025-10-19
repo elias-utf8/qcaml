@@ -35,17 +35,6 @@ $ make coverage       # run tests with coverage report (optional)
 $ make doc	      # for local documentation (optional)
 ```
 
-### Development commands
-```sh
-$ make build              # Build the project
-$ make test               # Run tests
-$ make coverage           # Run tests and generate HTML coverage report
-$ make coverage-summary   # Run tests and display coverage summary
-$ make open-coverage      # Generate coverage report and open in browser
-$ make clean              # Clean build artifacts and coverage files
-$ make doc		  # Generate documentation
-```
-
 ## Quick start
 ## Usages examples
 ## Features
