@@ -21,7 +21,7 @@ $ sudo apt install opam   # debian/ubuntu
 $ opam init
 $ opam switch create 5.2.0
 $ eval $(opam env)
-$ opam install dune odoc alcotest
+$ opam install dune odoc alcotest bisect_ppx
 ```
 ### Build and install
 The following will clone the repository, build QCaml and install it into your opam.
@@ -29,8 +29,21 @@ The following will clone the repository, build QCaml and install it into your op
 $ git clone https://github.com/elias-utf8/qcaml.git
 $ cd qcaml/
 $ opam install .
-$ dune build @doc # for local documentation (optional)
-$ dune test # run tests (optional)
+$ make build          # build the project
+$ make test           # run tests (optional)
+$ make coverage       # run tests with coverage report (optional)
+$ make doc	      # for local documentation (optional)
+```
+
+### Development commands
+```sh
+$ make build              # Build the project
+$ make test               # Run tests
+$ make coverage           # Run tests and generate HTML coverage report
+$ make coverage-summary   # Run tests and display coverage summary
+$ make open-coverage      # Generate coverage report and open in browser
+$ make clean              # Clean build artifacts and coverage files
+$ make doc		  # Generate documentation
 ```
 
 ## Quick start

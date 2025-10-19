@@ -1,14 +1,17 @@
 (test
  (name test_complex)
  (modules test_complex)
- (libraries quantum alcotest))
+ (libraries quantum alcotest)
+ (instrumentation (backend bisect_ppx)))
 
- (test
-  (name test_qubit)
-  (modules test_qubit)
-  (libraries quantum alcotest))
+(test
+ (name test_qubit)
+ (modules test_qubit)
+ (libraries quantum alcotest)
+ (instrumentation (backend bisect_ppx)))
 
-  (test
-   (name test_gate)
-   (modules test_gate)
-   (libraries quantum alcotest))
+(test
+ (name test_gate)
+ (modules test_gate)
+ (libraries quantum alcotest)
+ (instrumentation (backend bisect_ppx)))
