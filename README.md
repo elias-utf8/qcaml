@@ -32,7 +32,7 @@ $ opam install .
 $ make build          # build the project
 $ make test           # run tests (optional)
 $ make coverage       # run tests with coverage report (optional)
-$ make doc	      # for local documentation (optional)
+$ make doc	          # for local documentation (optional)
 ```
 
 ## Quick start
