@@ -54,12 +54,12 @@ $ make doc	      # for local documentation (optional)
     </tr>
     <tr>
       <td><strong>Basic Quantum Gates</strong></td>
-      <td><span>⚠ In Progress</span></td>
+      <td><span>Completed</span></td>
       <td>Implementation of fundamental gates (Hadamard, Pauli-X/Y/Z)</td>
     </tr>
     <tr>
       <td><strong>Quantum Measurements</strong></td>
-      <td><span style="color: #6c757d;">○ Planned</span></td>
+      <td><span style="color: #6c757d;">⚠ In Progress</span></td>
       <td>Computational basis measurements with probability calculations</td>
     </tr>
     <tr>

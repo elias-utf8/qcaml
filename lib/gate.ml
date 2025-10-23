@@ -43,3 +43,11 @@ let z q =
     (Complex.cmul Complex.minus_one q.beta) in
   q.alpha <- new_alpha;
   q.beta <- new_beta
+
+let h q =
+  let sqrt2_inv = 1.0 /. sqrt 2.0 in
+  let factor = { Complex.re = sqrt2_inv; im = 0.0 } in
+  let new_alpha = Complex.cmul factor (Complex.cadd q.alpha q.beta) in
+  let new_beta = Complex.cmul factor (Complex.csub q.alpha q.beta) in
+  q.alpha <- new_alpha;
+  q.beta <- new_beta

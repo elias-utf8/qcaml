@@ -26,10 +26,20 @@ let test_z () =
   Alcotest.(check (float 0.0001)) "beta.re" 0.0 q.beta.re;
   Alcotest.(check (float 0.0001)) "beta.im" 0.0 q.beta.im
 
+let test_h () =
+  let q = { alpha = one; beta = zero } in
+  let plus = plus () in
+  h q;
+  Alcotest.(check (float 0.0001)) "alpha.re" plus.alpha.re q.alpha.re;
+  Alcotest.(check (float 0.0001)) "alpha.im" plus.alpha.im q.alpha.im;
+  Alcotest.(check (float 0.0001)) "beta.re" plus.beta.re q.beta.re;
+  Alcotest.(check (float 0.0001)) "beta.im" plus.beta.im q.beta.im
+
 let () =
   let open Alcotest in
   run "Gates tests" [
     "x", [ test_case "x" `Quick test_x ];
     "y", [ test_case "y" `Quick test_y ];
-    "z", [ test_case "z" `Quick test_z ]
+    "z", [ test_case "z" `Quick test_z ];
+    "h", [ test_case "h" `Quick test_h ]
   ]
