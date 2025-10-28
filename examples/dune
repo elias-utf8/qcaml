@@ -7,3 +7,13 @@
  (public_name apply_gate_exe)
  (name apply_gate)
  (libraries quantum))
+
+(executable
+ (public_name measure_qubit_exe)
+ (name measure_qubit)
+ (libraries quantum))
+
+(executable
+ (public_name plot_exe)
+ (name test_plot)
+ (libraries quantum owl owl-plplot graphics))

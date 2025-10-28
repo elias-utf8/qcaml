@@ -61,3 +61,9 @@ val cconj : complex -> complex
   @return The product of r and c
 *)
 val cmul_scalar : float -> complex -> complex
+
+(** Complex modulus
+  @param c Complex number
+  @return The modulus of c
+*)
+val cmod: complex -> float

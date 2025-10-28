@@ -37,10 +37,13 @@ let csub c1 c2 =
   { re = c1.re -. c2.re;
     im = c1.im -. c2.im }
 
-let cconj c =
+  let cconj c =
   { re = c.re;
     im = -. c.im }
 
 let cmul_scalar r c =
   { re = r *. c.re;
     im = r *. c.im }
+
+let cmod c =
+  sqrt (c.re *. c.re +. c.im *. c.im)

@@ -9,7 +9,7 @@
 </div>
 
 ## Presentation
-QCaml for Quantum (O)Caml is an experimental library for simulating quantum algorithms. This library is currently under development. Among the MVP's features are qubit declaration, application of classical gates (H, X, CNOT), measurement, and visualization.
+QCaml for Quantum (O)Caml is an experimental library for simulating quantum algorithms. This library is currently under development. Among the MVP's features are qubit declaration, application of classical gates (X,Y,Z,H), measurement, and visualization.
 
 **Status**: This library is currently in early development and the API may change significantly.
 
@@ -54,13 +54,19 @@ $ make doc	          # for local documentation (optional)
     </tr>
     <tr>
       <td><strong>Basic Quantum Gates</strong></td>
-      <td><span>Completed</span></td>
+      <td><span>✓ Completed</span></td>
       <td>Implementation of fundamental gates (Hadamard, Pauli-X/Y/Z)</td>
     </tr>
     <tr>
       <td><strong>Quantum Measurements</strong></td>
-      <td><span style="color: #6c757d;">⚠ In Progress</span></td>
+      <td><span style="color: #6c757d;">✓ Completed</span></td>
       <td>Computational basis measurements with probability calculations</td>
+    </tr>
+    <tr>
+    <tr>
+      <td><strong>Bloch sphere visualization</strong></td>
+      <td><span>In progress..</span></td>
+      <td>Visualization of qubit states on the Bloch sphere</td>
     </tr>
     <tr>
       <td><strong>Advanced Gate</strong></td>
