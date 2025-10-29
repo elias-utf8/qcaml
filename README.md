@@ -1,4 +1,4 @@
-# <img src="https://github.com/elias-utf8/qcaml/blob/main/assets/images/qcaml_logo_tiny.svg" alt="QCaml logo" width="100"/>  qcaml
+# <img src="https://github.com/elias-utf8/qcaml/blob/main/assets/images/qcaml_banner.png" alt="QCaml logo" width="250"/>
 
 A lightweight OCaml library to experiment with quantum states, gates and measurements. For learning quantum computing concepts and visualizing qubit states on the Bloch sphere.
 
