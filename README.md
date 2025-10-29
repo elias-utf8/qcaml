@@ -1,17 +1,17 @@
-<div align="center">
-   <img src="https://github.com/elias-utf8/qcaml/blob/main/assets/images/qcaml_banner.png" alt="QCaml logo" width="350"/>
+# qcaml
+<img src="https://github.com/elias-utf8/qcaml/blob/main/assets/images/qcaml_logo_tiny.svg" alt="QCaml logo" width="100"/> A lightweight OCaml library for exploring quantum algorithms and circuits
 
-   A lightweight OCaml library for exploring quantum algorithms and circuits
-
-   [![License](https://img.shields.io/badge/License-Apache%202.0-3c60b1.svg?logo=opensourceinitiative&logoColor=white&style=flat-square)](https://github.com/elias-utf8/qcaml/blob/main/LICENSE)
-   [![OCaml](https://img.shields.io/badge/OCaml-5.2-ec6813.svg?style=flat-square&logo=ocaml&logoColor=white)](https://ocaml.org/)
-   [![CI Status](https://img.shields.io/github/actions/workflow/status/elias-utf8/qcaml/main.yml?style=flat-square&logo=github&label=build)](https://github.com/elias-utf8/qcaml/actions/workflows/main.yml)
-</div>
+[![License](https://img.shields.io/badge/License-Apache%202.0-3c60b1.svg?logo=opensourceinitiative&logoColor=white&style=flat-square)](https://github.com/elias-utf8/qcaml/blob/main/LICENSE)
+[![OCaml](https://img.shields.io/badge/OCaml-5.2-ec6813.svg?style=flat-square&logo=ocaml&logoColor=white)](https://ocaml.org/)
+[![CI Status](https://img.shields.io/github/actions/workflow/status/elias-utf8/qcaml/main.yml?style=flat-square&logo=github&label=build)](https://github.com/elias-utf8/qcaml/actions/workflows/main.yml)
 
 ## Presentation
 QCaml for Quantum (O)Caml is an experimental library for simulating quantum algorithms. This library is currently under development. Among the MVP's features are qubit declaration, application of classical gates (X,Y,Z,H), measurement, and visualization.
 
-**Status**: This library is currently in early development and the API may change significantly.
+> [!IMPORTANT]
+>
+> **Status**: This library is currently in early development and the API may change significantly.
+>
 
 ## Installation
 ### Prerequisites
@@ -28,12 +28,11 @@ The following will clone the repository, build QCaml and install it into your op
 ```sh
 $ git clone https://github.com/elias-utf8/qcaml.git
 $ cd qcaml/
-$ opam install .
 $ make
+$ opam install .
 ```
 
 ## Quick start
-## Usages examples
 ## Features
 <table>
   <thead>
