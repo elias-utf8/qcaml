@@ -6,13 +6,15 @@ A lightweight OCaml library for exploring quantum algorithms and circuits
 [![OCaml](https://img.shields.io/badge/OCaml-5.2-ec6813.svg?style=flat-square&logo=ocaml&logoColor=white)](https://ocaml.org/)
 [![CI Status](https://img.shields.io/github/actions/workflow/status/elias-utf8/qcaml/main.yml?style=flat-square&logo=github&label=build)](https://github.com/elias-utf8/qcaml/actions/workflows/main.yml)
 
-## Presentation
-QCaml for Quantum (O)Caml is an experimental library for simulating quantum algorithms. This library is currently under development. Among the MVP's features are qubit declaration, application of classical gates (X,Y,Z,H), measurement, and visualization.
+## Presentation <img src="https://github.com/elias-utf8/qcaml/blob/main/assets/images/snippet.png" width="500px" align="right">
 
+
+QCaml for Quantum (O)Caml is an experimental library for simulating quantum algorithms. This library is currently under development. Among the MVP's features are qubit declaration, application of classical gates (X,Y,Z,H), measurement, and visualization.
 > [!IMPORTANT]
 >
 > **Status**: This library is currently in early development and may change significantly.
 >
+<br>
 
 ## Installation
 ### Prerequisites
@@ -34,18 +36,29 @@ $ opam install .
 ```
 
 ## Quick start
-Try now this simple example :
+Try this simple example to visualize a superposition state on the Bloch sphere:
+
+<table>
+<tr>
+<td>
+
 ```ocaml
-(* examples/apply_gate.ml*)
+(* examples/bloch_sphere.ml *)
 open Quantum
 
 let () =
-  let q = Qubit.zero () in
-  Gate.x q;
+  let q = Qubit.plus () in
+  Visualization.plot_bloch q;
   Measurement.measure q;
   Printf.printf "%s\n" (Qubit.print () q);
-  Visualization.plot_bloch q;
 ```
+</td>
+<td>
+  <img src="https://github.com/elias-utf8/qcaml/blob/main/assets/images/bloch.png" alt="Bloch Sphere" width="400">
+</td>
+</tr>
+</table>
+
 ## Features
 <table>
   <thead>
