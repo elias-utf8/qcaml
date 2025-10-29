@@ -28,8 +28,8 @@ The following will clone the repository, build QCaml and install it into your op
 ```sh
 $ git clone https://github.com/elias-utf8/qcaml.git
 $ cd qcaml/
-$ opam install .
 $ make
+$ opam install .
 ```
 
 ## Quick start
