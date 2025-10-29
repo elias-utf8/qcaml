@@ -59,8 +59,8 @@ void display() {
     drawText(0.0, 0.0, -1.1, "|1>⟩");
 
 
-    glColor3f(1.0, 1.0, 0.0);
-    glutWireSphere(1.0, 10, 10);
+    glColor3f(0.5, 0.5, 0.5);
+    glutWireSphere(1, 10, 10);
     glutSwapBuffers();
 }
 
@@ -97,8 +97,8 @@ void init() {
 int main(int argc, char** argv) {
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
-    glutInitWindowSize(1000, 1000);
-    glutCreateWindow("Bloch sphere");
+    glutInitWindowSize(500, 500);
+    glutCreateWindow("qcaml");
     init();
     glutDisplayFunc(display);
     glutMouseFunc(mouse);
