@@ -11,10 +11,7 @@ float angleX = -59, angleY = -46;
 int lastX, lastY;
 bool isDragging = false;
 float sensitivity = 0.3;
-
 float theta_val, phi_val;
-
-
 
 void drawText(float x, float y, float z, const char* text) {
     glRasterPos3f(x, y, z);
@@ -51,17 +48,17 @@ void drawQubitState(float theta, float phi){
     glBegin(GL_LINES);
     glColor3f(1.0, 0.5, 0.0);
     glVertex3f(0.0, 0.0, 0.0); glVertex3f(x, y, z);
-	glEnd();  
+	glEnd();
 }
 
 void display() {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glLoadIdentity();
-        
+
     glTranslatef(0.0, 0.0, -5.0);
     glRotatef(angleX, 1.0, 0.0, 0.0);
     glRotatef(angleY, 0.0, 1.0, 0.0);
-    
+
     drawAxes();
     glColor3f(1.0, 1.0, 1.0);
     drawText(1.1, 0.0, 0.0, "|+>");
@@ -70,12 +67,12 @@ void display() {
     drawText(0.0, -1.1, 0.0, "|-i>");
     drawText(0.0, 0.0, 1.1, "|0>");
     drawText(0.0, 0.0, -1.1, "|1>");
-    
+
     glColor3f(0.5, 0.5, 0.5);
     glutWireSphere(1, 10, 10);
-    
+
     drawQubitState(theta_val, phi_val);
-    
+
     glMatrixMode(GL_PROJECTION);
     glPushMatrix();
     glLoadIdentity();
@@ -83,7 +80,7 @@ void display() {
     glMatrixMode(GL_MODELVIEW);
     glPushMatrix();
     glLoadIdentity();
-    
+
     char buffer[50];
     snprintf(buffer, sizeof(buffer), "X:%.0f Y:%.0f", angleX, angleY);
     glColor3f(1.0, 1.0, 1.0);
@@ -91,12 +88,12 @@ void display() {
     for(char *c = buffer; *c; c++) {
         glutBitmapCharacter(GLUT_BITMAP_HELVETICA_12, *c);
     }
-    
+
     glPopMatrix();
     glMatrixMode(GL_PROJECTION);
     glPopMatrix();
     glMatrixMode(GL_MODELVIEW);
-    
+
     glutSwapBuffers();
 }
 
@@ -112,10 +109,10 @@ void motion(int x, int y) {
     if (isDragging) {
         int dx = x - lastX;
         int dy = y - lastY;
-        
+
         angleY += dx * sensitivity;
         angleX += dy * sensitivity;
-        
+
         lastX = x;
         lastY = y;
         glutPostRedisplay();
@@ -136,24 +133,24 @@ void init() {
 
 CAMLprim value bloch(value phi, value theta) {
     CAMLparam2(phi, theta);
-    
+
     theta_val = Double_val(theta);
     phi_val = Double_val(phi);
-    
+
     int argc = 1;
     char *argv[] = {"qcaml", NULL};
-    
+
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
     glutInitWindowSize(windowWidth, windowHeight);
     glutCreateWindow("qcaml");
-    
+
     init();
     glutDisplayFunc(display);
     glutMouseFunc(mouse);
     glutMotionFunc(motion);
-    
+
     glutMainLoop();
-    
+
     CAMLreturn(Val_unit);
 }

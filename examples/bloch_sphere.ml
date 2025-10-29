@@ -1,12 +1,7 @@
-open Quantum.Qubit
-open Quantum.Gate
-open Quantum.Measurement
-open Quantum.Visualization
+open Quantum
 
 let () =
-  let q = zero () in
-  x q;
-  measure q;
-  Printf.printf "%s" (print () q);
-  flush stdout;
-  plot_bloch q;
+  let q = Qubit.plus () in
+  Measurement.measure q;
+  Printf.printf "%s\n" (Qubit.print () q);
+  Visualization.plot_bloch q;

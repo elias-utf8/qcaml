@@ -1,4 +1,4 @@
-# <img src="https://github.com/elias-utf8/qcaml/blob/main/assets/images/qcaml_logo_tiny.svg" alt="QCaml logo" width="100"/>  qcaml 
+# <img src="https://github.com/elias-utf8/qcaml/blob/main/assets/images/qcaml_logo_tiny.svg" alt="QCaml logo" width="100"/>  qcaml
 
 A lightweight OCaml library for exploring quantum algorithms and circuits
 
@@ -34,6 +34,7 @@ $ opam install .
 ```
 
 ## Quick start
+
 ## Features
 <table>
   <thead>
@@ -62,18 +63,13 @@ $ opam install .
     <tr>
     <tr>
       <td><strong>Bloch sphere visualization</strong></td>
-      <td><span>In progress..</span></td>
+      <td><span>✓ Completed</span></td>
       <td>Visualization of qubit states on the Bloch sphere</td>
     </tr>
     <tr>
       <td><strong>Advanced Gate</strong></td>
-      <td><span>○ Planned</span></td>
-      <td>Extended gate set (Phase, CNOT, Toffoli, SWAP, controlled gates, rotation gates)</td>
-    </tr>
-    <tr>
-      <td><strong>Multi-Qubit Operations</strong></td>
-      <td><span>○ Planned</span></td>
-      <td>Efficient tensor product operations for n-qubit systems</td>
+      <td><span>In progress..</span></td>
+      <td>Extended gate set (Phase and rotation gates)</td>
     </tr>
     <tr>
       <td><strong>Circuit Builder</strong></td>
@@ -81,8 +77,13 @@ $ opam install .
       <td>High-level API for composing and optimizing quantum circuits</td>
     </tr>
     <tr>
-      <td><strong>Circuit Visualization</strong></td>
+      <td><strong>Multi-Qubit Operations</strong></td>
       <td><span>○ Planned</span></td>
+      <td>Efficient tensor product operations for n-qubit systems</td>
+    </tr>
+    <tr>
+      <td><strong>Simulator</strong></td>
+      <td><span>○ Planned (I will never have time)</span></td>
       <td>Export circuits to standard formats (QASM, diagram generation)</td>
     </tr>
   </tbody>
@@ -91,7 +92,6 @@ $ opam install .
 ## Documentation
 
 <p>
-
    To read the project whole documentation, please refer to the [wiki](https://github.com/elias-utf8/qcaml/wiki).
 </p>
 <p>

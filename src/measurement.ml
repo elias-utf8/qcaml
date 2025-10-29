@@ -19,6 +19,7 @@ open Complex
 let measure q =
   let p0 = cmod q.alpha *. cmod q.alpha in  (* Probability of |0⟩ *)
 
+  Random.self_init ();  (* Initialize RNG with a random seed *)
   let rand = Random.float 1.0 in
   if rand < p0 then begin
     (* Collapse to |0⟩ *)

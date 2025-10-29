@@ -9,8 +9,8 @@
  (libraries quantum))
 
 (executable
- (public_name measure_qubit_exe)
- (name measure_qubit)
+ (public_name statistics_exe)
+ (name statistics)
  (libraries quantum))
 
 (executable

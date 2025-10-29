@@ -8,6 +8,7 @@ let () =
   for _ = 1 to 1000 do
     let q = Qubit.plus () in
     Measurement.measure q;
+    Printf.printf "%s\n" (Qubit.print () q);
     if Complex.cmod q.alpha > 0.5 then incr count_zero
   done;
   Printf.printf "Probability of |0⟩: %.2f%% (expected: ~50%%)\n"
