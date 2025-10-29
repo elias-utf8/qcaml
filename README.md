@@ -36,7 +36,7 @@ $ opam install .
 ```
 
 ## Quick start
-Try this simple example to visualize a superposition state on the Bloch sphere:
+Try this simple example by running `dune exec examples/bloch_sphere.exe` to visualize a superposition state on the Bloch sphere:
 
 <table>
 <tr>
@@ -114,10 +114,6 @@ let () =
 </table>
 
 ## Documentation
-
-<p>
-   To read the project whole documentation, please refer to the [wiki](https://github.com/elias-utf8/qcaml/wiki).
-</p>
 <p>
 
    API Reference: Generated documentation at `_build/default/_doc/_html/index.html` (after running dune build @doc) or see [online documentation](https://elias-utf8.github.io/qcaml/) )
