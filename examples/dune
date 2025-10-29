@@ -16,4 +16,4 @@
 (executable
  (public_name plot_exe)
  (name test_plot)
- (libraries quantum owl owl-plplot graphics))
+ (libraries quantum))
