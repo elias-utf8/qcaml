@@ -11,7 +11,7 @@ QCaml for Quantum (O)Caml is an experimental library for simulating quantum algo
 
 > [!IMPORTANT]
 >
-> **Status**: This library is currently in early development and the API may change significantly.
+> **Status**: This library is currently in early development and may change significantly.
 >
 
 ## Installation
@@ -34,7 +34,18 @@ $ opam install .
 ```
 
 ## Quick start
+Try now this simple example :
+```ocaml
+(* examples/apply_gate.ml*)
+open Quantum
 
+let () =
+  let q = Qubit.zero () in
+  Gate.x q;
+  Measurement.measure q;
+  Printf.printf "%s\n" (Qubit.print () q);
+  Visualization.plot_bloch q;
+```
 ## Features
 <table>
   <thead>
