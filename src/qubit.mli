@@ -32,4 +32,4 @@ val get_beta : q -> Complex.complex
     @param q The qubit to print
     @return A string representation of the qubit
 *)
-val print : q -> string
+val print : unit -> q -> string

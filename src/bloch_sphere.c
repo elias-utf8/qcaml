@@ -2,6 +2,8 @@
 #include <stdbool.h>
 #include <math.h>
 #include <stdio.h>
+#include <caml/mlvalues.h>
+#include <caml/memory.h>
 
 int windowHeight = 500;
 int windowWidth = 500;
@@ -9,6 +11,10 @@ float angleX = -59, angleY = -46;
 int lastX, lastY;
 bool isDragging = false;
 float sensitivity = 0.3;
+
+float theta_val, phi_val;
+
+
 
 void drawText(float x, float y, float z, const char* text) {
     glRasterPos3f(x, y, z);
@@ -45,9 +51,7 @@ void drawQubitState(float theta, float phi){
     glBegin(GL_LINES);
     glColor3f(1.0, 0.5, 0.0);
     glVertex3f(0.0, 0.0, 0.0); glVertex3f(x, y, z);
-	glEnd();
-
-    
+	glEnd();  
 }
 
 void display() {
@@ -70,7 +74,7 @@ void display() {
     glColor3f(0.5, 0.5, 0.5);
     glutWireSphere(1, 10, 10);
     
-    drawQubitState(1.5708, 4.71239);
+    drawQubitState(theta_val, phi_val);
     
     glMatrixMode(GL_PROJECTION);
     glPushMatrix();
@@ -130,15 +134,26 @@ void init() {
     glMatrixMode(GL_MODELVIEW);
 }
 
-int main(int argc, char** argv) {
+CAMLprim value bloch(value phi, value theta) {
+    CAMLparam2(phi, theta);
+    
+    theta_val = Double_val(theta);
+    phi_val = Double_val(phi);
+    
+    int argc = 1;
+    char *argv[] = {"qcaml", NULL};
+    
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
-    glutInitWindowSize(windowHeight, windowWidth);
+    glutInitWindowSize(windowWidth, windowHeight);
     glutCreateWindow("qcaml");
+    
     init();
     glutDisplayFunc(display);
     glutMouseFunc(mouse);
     glutMotionFunc(motion);
+    
     glutMainLoop();
-    return 0;
+    
+    CAMLreturn(Val_unit);
 }

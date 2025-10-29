@@ -23,13 +23,13 @@ let test_one () =
 (** Test print function for |0⟩ *)
 let test_zero_print () =
   let q = zero () in
-  let s = print q in
+  let s = print () q in
   Alcotest.(check string) "print |0⟩" "|ψ⟩ = (1.00 + 0.00i)|0⟩ + (0.00 + 0.00i)|1⟩" s
 
 (** Test print function for |1⟩ *)
 let test_one_print () =
   let q = one () in
-  let s = print q in
+  let s = print () q in
   Alcotest.(check string) "print |1⟩" "|ψ⟩ = (0.00 + 0.00i)|0⟩ + (1.00 + 0.00i)|1⟩" s
 
 let () =

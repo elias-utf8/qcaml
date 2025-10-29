@@ -38,7 +38,7 @@ let get_alpha q = q.alpha
 
 let get_beta q = q.beta
 
-let print q =
+let print () q =
   Printf.sprintf "|ψ⟩ = (%.2f + %.2fi)|0⟩ + (%.2f + %.2fi)|1⟩"
     q.alpha.re q.alpha.im
     q.beta.re q.beta.im

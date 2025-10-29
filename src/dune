@@ -3,4 +3,9 @@
  (public_name qcaml)
  (libraries)
  (modules qubit gate circuit measurement visualization complex)
+ (foreign_stubs
+  (language c)
+  (names bloch_sphere)
+  (flags -I/usr/include))
+ (c_library_flags -lglut -lGLU -lGL)
  (instrumentation (backend bisect_ppx)))

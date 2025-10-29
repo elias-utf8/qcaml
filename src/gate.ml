@@ -13,7 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *)
-
 open Qubit
 
 let x q =
@@ -29,8 +28,8 @@ let x q =
 let y q =
   let i = { Complex.re = 0.0; im = 1.0 } in
   let minus_i = { Complex.re = 0.0; im = -1.0 } in
-  let new_alpha = Complex.cmul i q.beta in
-  let new_beta = Complex.cmul minus_i q.alpha in
+  let new_alpha = Complex.cmul minus_i q.beta in
+  let new_beta = Complex.cmul i q.alpha in
   q.alpha <- new_alpha;
   q.beta <- new_beta
 

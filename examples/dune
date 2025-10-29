@@ -14,6 +14,6 @@
  (libraries quantum))
 
 (executable
- (public_name plot_exe)
- (name test_plot)
+ (public_name bloch_exe)
+ (name bloch_sphere)
  (libraries quantum))

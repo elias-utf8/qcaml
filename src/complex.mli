@@ -67,3 +67,9 @@ val cmul_scalar : float -> complex -> complex
   @return The modulus of c
 *)
 val cmod: complex -> float
+
+(** Complex argument
+  @param c Complex number
+  @return The angle of c
+*)
+val carg : complex -> float

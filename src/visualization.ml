@@ -13,4 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *)
-let plot_bloch _q = ()
+ 
+open Qubit
+open Complex
+
+external bloch : float -> float -> unit = "bloch"
+
+let plot_bloch q =
+  bloch ((carg q.beta) -. (carg q.alpha)) (2.0 *. acos (cmod q.alpha))

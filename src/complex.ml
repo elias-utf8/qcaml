@@ -47,3 +47,6 @@ let cmul_scalar r c =
 
 let cmod c =
   sqrt (c.re *. c.re +. c.im *. c.im)
+
+let carg c =
+  atan2 c.im c.re
