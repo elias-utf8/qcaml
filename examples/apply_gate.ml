@@ -5,5 +5,5 @@ let () =
   Gate.h q;
   Gate.z q;
   Gate.h q;
-  Printf.printf (Qubit.print () q);
+  Printf.printf "%s\n" (Qubit.print () q);
   Visualization.plot_bloch q;
