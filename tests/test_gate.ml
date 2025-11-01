@@ -16,7 +16,7 @@ let test_y () =
   Alcotest.(check (float 0.0001)) "alpha.re" 0.0 q.alpha.re;
   Alcotest.(check (float 0.0001)) "alpha.im" 0.0 q.alpha.im;
   Alcotest.(check (float 0.0001)) "beta.re" 0.0 q.beta.re;
-  Alcotest.(check (float 0.0001)) "beta.im" (-1.0) q.beta.im
+  Alcotest.(check (float 0.0001)) "beta.im" 1.0 q.beta.im
 
 let test_z () =
   let q = { alpha = one; beta = zero } in
