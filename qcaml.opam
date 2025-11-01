@@ -34,6 +34,7 @@ depends: [
   "alcotest" {with-test}
   "odoc" {with-doc}
   "bisect_ppx" {with-test}
+  "conf-freeglut"
 ]
 build: [
   ["dune" "subst"] {dev}
