@@ -1,6 +1,6 @@
 (lang dune 2.9)
 (name qcaml)
-(version 0.1.1)
+(version 0.1.2)
 (use_standard_c_and_cxx_flags false)
 (generate_opam_files true)
 
