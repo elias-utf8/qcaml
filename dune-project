@@ -28,6 +28,8 @@ Features:
  (depends
   (ocaml (>= 5.2))
   (dune (>= 2.9))
+  dune-configurator
+  conf-freeglut
   (alcotest :with-test)
   (odoc :with-doc)
   (bisect_ppx :with-test))
