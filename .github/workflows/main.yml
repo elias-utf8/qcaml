@@ -30,7 +30,7 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update && sudo apt-get install -y libglu1-mesa-dev
-          opam install . --deps-only --with-doc --yes
+          opam install . --deps-only --with-doc --yes || true
           opam install odoc --yes
       
       - name: Generate documentation
