@@ -30,6 +30,7 @@ Features:
   (dune (>= 3.17))
   dune-configurator
   conf-freeglut
+  conf-glu
   (alcotest :with-test)
   (odoc :with-doc)
   (bisect_ppx :with-test))
