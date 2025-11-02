@@ -1,4 +1,4 @@
-(lang dune 2.9)
+(lang dune 3.17)
 (name qcaml)
 (version 0.1.2)
 (use_standard_c_and_cxx_flags false)
@@ -27,7 +27,7 @@ Features:
 - Comprehensive test suite")
  (depends
   (ocaml (>= 5.2))
-  (dune (>= 2.9))
+  (dune (>= 3.17))
   dune-configurator
   conf-freeglut
   (alcotest :with-test)
