@@ -68,6 +68,12 @@ val cmul_scalar : float -> complex -> complex
 *)
 val cmod: complex -> float
 
+(** Squared complex modulus (more efficient when sqrt is not needed)
+  @param c Complex number
+  @return The squared modulus of c
+*)
+val cmod_squared: complex -> float
+
 (** Complex argument
   @param c Complex number
   @return The angle of c

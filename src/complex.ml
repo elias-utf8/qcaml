@@ -48,5 +48,9 @@ let cmul_scalar r c =
 let cmod c =
   sqrt (c.re *. c.re +. c.im *. c.im)
 
+(* Squared modulus - more efficient when sqrt is not needed *)
+let cmod_squared c =
+  c.re *. c.re +. c.im *. c.im
+
 let carg c =
   atan2 c.im c.re

@@ -20,8 +20,7 @@ open Complex
 let () = Random.self_init ()
 
 let measure q =
-  let alpha_mod = cmod q.alpha in
-  let p0 = alpha_mod *. alpha_mod in  (* Probability of |0⟩ *)
+  let p0 = Complex.cmod_squared q.alpha in  (* Probability of |0⟩ *)
 
   let rand = Random.float 1.0 in
   if rand < p0 then begin
