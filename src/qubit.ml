@@ -20,18 +20,21 @@ type q = {
   mutable alpha : complex;
   mutable beta : complex }
 
+(* Cache commonly used constant *)
+let sqrt2_inv = 1.0 /. sqrt 2.0
+
 let zero ()= { alpha = Complex.one; beta = Complex.zero }
 
 let one () = { alpha = Complex.zero; beta = Complex.one }
 
 let plus () = {
-  alpha = { re = 1.0 /. sqrt 2.0; im = 0.0 };
-  beta  = { re = 1.0 /. sqrt 2.0; im = 0.0 };
+  alpha = { re = sqrt2_inv; im = 0.0 };
+  beta  = { re = sqrt2_inv; im = 0.0 };
 }
 
 let minus () = {
-  alpha = { re = 1.0 /. sqrt 2.0; im = 0.0 };
-  beta  = { re = -.1.0 /. sqrt 2.0; im = 0.0 };
+  alpha = { re = sqrt2_inv; im = 0.0 };
+  beta  = { re = -.sqrt2_inv; im = 0.0 };
 }
 
 let get_alpha q = q.alpha

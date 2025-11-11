@@ -16,10 +16,13 @@
 open Qubit
 open Complex
 
-let measure q =
-  let p0 = cmod q.alpha *. cmod q.alpha in  (* Probability of |0⟩ *)
+(* Initialize RNG once at module load time *)
+let () = Random.self_init ()
 
-  Random.self_init ();  (* Initialize RNG with a random seed *)
+let measure q =
+  let alpha_mod = cmod q.alpha in
+  let p0 = alpha_mod *. alpha_mod in  (* Probability of |0⟩ *)
+
   let rand = Random.float 1.0 in
   if rand < p0 then begin
     (* Collapse to |0⟩ *)

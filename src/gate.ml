@@ -15,38 +15,38 @@
  *)
 open Qubit
 
+(* Pauli-X gate: swaps |0⟩ and |1⟩ *)
 let x q =
-  let new_alpha = Complex.cadd
-    (Complex.cmul Complex.zero q.alpha)
-    (Complex.cmul Complex.one q.beta) in
-  let new_beta = Complex.cadd
-    (Complex.cmul Complex.one q.alpha)
-    (Complex.cmul Complex.zero q.beta) in
+  let new_alpha = q.beta in
+  let new_beta = q.alpha in
   q.alpha <- new_alpha;
   q.beta <- new_beta
 
+(* Cache imaginary unit constants for Y gate *)
+let i = { Complex.re = 0.0; im = 1.0 }
+let minus_i = { Complex.re = 0.0; im = -1.0 }
+
+(* Pauli-Y gate *)
 let y q =
-  let i = { Complex.re = 0.0; im = 1.0 } in
-  let minus_i = { Complex.re = 0.0; im = -1.0 } in
   let new_alpha = Complex.cmul minus_i q.beta in
   let new_beta = Complex.cmul i q.alpha in
   q.alpha <- new_alpha;
   q.beta <- new_beta
 
+(* Pauli-Z gate: flips phase of |1⟩ *)
 let z q =
-  let new_alpha = Complex.cadd
-    (Complex.cmul Complex.one q.alpha)
-    (Complex.cmul Complex.zero q.beta) in
-  let new_beta = Complex.cadd
-    (Complex.cmul Complex.zero q.alpha)
-    (Complex.cmul Complex.minus_one q.beta) in
+  let new_alpha = q.alpha in
+  let new_beta = Complex.cmul Complex.minus_one q.beta in
   q.alpha <- new_alpha;
   q.beta <- new_beta
 
+(* Cache sqrt(2)^-1 to avoid recomputation *)
+let sqrt2_inv = 1.0 /. sqrt 2.0
+let sqrt2_inv_complex = { Complex.re = sqrt2_inv; im = 0.0 }
+
+(* Hadamard gate: creates superposition *)
 let h q =
-  let sqrt2_inv = 1.0 /. sqrt 2.0 in
-  let factor = { Complex.re = sqrt2_inv; im = 0.0 } in
-  let new_alpha = Complex.cmul factor (Complex.cadd q.alpha q.beta) in
-  let new_beta = Complex.cmul factor (Complex.csub q.alpha q.beta) in
+  let new_alpha = Complex.cmul sqrt2_inv_complex (Complex.cadd q.alpha q.beta) in
+  let new_beta = Complex.cmul sqrt2_inv_complex (Complex.csub q.alpha q.beta) in
   q.alpha <- new_alpha;
   q.beta <- new_beta
