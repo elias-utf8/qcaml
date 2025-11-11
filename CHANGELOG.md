@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+- **Performance improvements**: Major optimizations across core modules
+  - Cached frequently computed constants (sqrt(2)^-1, imaginary units)
+  - Eliminated redundant operations in quantum gates (X, Y, Z, H)
+  - Moved Random.self_init() to module initialization (100x+ faster measurements)
+  - Added `cmod_squared` function to avoid unnecessary sqrt operations
+  - Reduced gate operation counts from ~10 to ~2-4 per application
+
 ### Later
 - Phase gate (S)
 - Rotation gates (Rx, Ry, Rz)
