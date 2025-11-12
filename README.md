@@ -25,7 +25,14 @@ $ opam switch create 5.2.0
 $ eval $(opam env)
 $ opam install dune odoc alcotest bisect_ppx
 ```
-### Build and install
+### Install from OPAM (recommended)
+QCaml is now available on the official OPAM repository, so you can install it directly:
+```sh
+$ opam install qcaml
+```
+### Develop locally
+If you want to work on QCaml locally (for development, testing, or contributing), you can still clone and build the repository manually.
+
 The following will clone the repository, build QCaml and install it into your opam.
 ```sh
 $ git clone https://github.com/elias-utf8/qcaml.git
