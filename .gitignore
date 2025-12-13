@@ -4,3 +4,6 @@ _coverage/
 # Ignore the _opam directory which is acts as
 # a cache for the opam
 _opam/
+
+# Ignore VS Code settings
+.vscode/
