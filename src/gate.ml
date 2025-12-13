@@ -50,3 +50,17 @@ let h q =
   let new_beta = Complex.cmul factor (Complex.csub q.alpha q.beta) in
   q.alpha <- new_alpha;
   q.beta <- new_beta
+
+let s q =
+  let i = { Complex.re = 0.0; im = 1.0 } in
+  let new_alpha = Complex.cmul Complex.one q.alpha in
+  let new_beta = Complex.cmul i q.beta in
+  q.alpha <- new_alpha;
+  q.beta <- new_beta
+
+let t q =
+  let exp_i_pi_4 = { Complex.re = sqrt 2.0 /. 2.0; im = sqrt 2.0 /. 2.0 } in
+  let new_alpha = Complex.cmul Complex.one q.alpha in
+  let new_beta = Complex.cmul exp_i_pi_4 q.beta in
+  q.alpha <- new_alpha;
+  q.beta <- new_beta
