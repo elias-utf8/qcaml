@@ -5,15 +5,29 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+
+## [0.1.5] - 2025-12-13
+### Added
+- S (phase) gate
+- T (π/8) gate
+- Unit tests for S and T gates
+
+### Changed
+- Improved .gitignore to exclude .vscode directory
+
 ## [Unreleased]
 
 ### Later
-- Phase gate (S)
 - Rotation gates (Rx, Ry, Rz)
 - Multi-qubit systems with tensor products
 - Entangling gates (CNOT, Toffoli, SWAP)
 - Circuit builder API
 - QASM export functionality
+
+## [0.1.4] - 2025-12-13
+### Fixed
+- macOS ARM64 support: Fixed OpenGL/GLUT header detection on Apple Silicon Macs by using /opt/homebrew/include instead of /usr/local/include
+- FreeBSD compatibility: Fixed incorrect macOS detection that was breaking FreeBSD builds.
 
 ## [0.1.3] - 2025-11-2
 ### Changed 
