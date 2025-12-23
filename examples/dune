@@ -17,3 +17,8 @@
  (public_name bloch_exe)
  (name bloch_sphere)
  (libraries quantum))
+
+(executable
+ (public_name test_one_state_exe)
+ (name test_one_state)
+ (libraries quantum))

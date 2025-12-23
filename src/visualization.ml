@@ -17,8 +17,14 @@
 open Qubit
 open Complex
 
-external bloch : float -> float -> unit = "bloch"
+external bloch : float -> float -> float -> float -> float -> float -> unit = "bloch_bytecode" "bloch_native"
 
 let plot_bloch q =
   flush stdout;
-  bloch ((carg q.beta) -. (carg q.alpha)) (2.0 *. acos (cmod q.alpha))
+  let phi = (carg q.beta) -. (carg q.alpha) in
+  let theta = 2.0 *. acos (cmod q.alpha) in
+  let alpha_re = q.alpha.re in
+  let alpha_im = q.alpha.im in
+  let beta_re = q.beta.re in
+  let beta_im = q.beta.im in
+  bloch phi theta alpha_re alpha_im beta_re beta_im
