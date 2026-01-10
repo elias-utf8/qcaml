@@ -7,4 +7,15 @@
 *)
 open Qubit
 
-val plot_bloch : q -> unit
+(** Type holding values for Bloch sphere visualization *)
+type sphere_values = {
+  phi : float;
+  theta : float;
+  alpha_re : float;
+  alpha_im : float;
+  beta_re : float;
+  beta_im : float;
+}
+
+
+val init_values : q -> sphere_values
