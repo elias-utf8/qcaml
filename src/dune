@@ -1,6 +1,6 @@
 (library
  (name quantum)
  (public_name qcaml)
- (libraries)
+ (libraries raylib)
  (modules qubit gate circuit measurement visualization complex)
  (instrumentation (backend bisect_ppx)))

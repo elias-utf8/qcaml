@@ -17,3 +17,9 @@
  (public_name bloch_exe)
  (name bloch_sphere)
  (libraries quantum))
+
+
+(executable
+ (public_name test_graphics_exe)
+ (name test_graphics)
+ (libraries quantum))

@@ -18,4 +18,6 @@ type sphere_values = {
 }
 
 
-val init_values : q -> sphere_values
+val get_values : q -> sphere_values
+
+val plot_bloch : unit -> unit
