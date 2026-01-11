@@ -67,7 +67,7 @@ let draw_arrow_3d start_pos end_pos radius color =
   end
 
 let rec loop angle_x angle_y font =
-  if Raylib.window_should_close () then Raylib.close_window ()
+  if Raylib.window_should_close () then ()
   else
     let open Raylib in
 
@@ -188,4 +188,5 @@ let plot_bloch q () =
       (Raylib.get_font_default (), false)
   in
   loop 0.9 (0.8) font;
-  if should_unload then Raylib.unload_font font
+  if should_unload then Raylib.unload_font font;
+  Raylib.close_window ()
