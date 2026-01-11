@@ -27,11 +27,15 @@ jobs:
           ocaml-compiler: 5.2.1
           opam-disable-sandboxing: true
       
-      - name: Install dependencies
+      - name: Install system dependencies
         run: |
-          sudo apt-get update && sudo apt-get install -y libglu1-mesa-dev
-          opam install . --deps-only --with-doc --yes || true
-          opam install odoc --yes
+          sudo apt-get update
+          sudo apt-get install -y libgl1-mesa-dev libxi-dev libxcursor-dev libxrandr-dev libxinerama-dev
+      
+      - name: Install OCaml dependencies
+        run: |
+          opam install . --deps-only --with-doc
+          opam install raylib
       
       - name: Generate documentation
         run: opam exec -- dune build @doc
