@@ -17,7 +17,11 @@ type sphere_values = {
   beta_im : float;
 }
 
+(** Get the Cartesian coordinates of a qubit on the Bloch sphere *)
+val get_cartesian_coordinates : q -> float * float * float
 
+(** Get the values needed for Bloch sphere visualization from a qubit *)
 val get_values : q -> sphere_values
 
-val plot_bloch : unit -> unit
+(** Plot the Bloch sphere and the qubit state *)
+val plot_bloch : q -> unit -> unit

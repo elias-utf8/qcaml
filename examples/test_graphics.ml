@@ -1,4 +1,5 @@
 open Quantum
 
 let () =
-  Visualization.plot_bloch ();
+  let q0 = Qubit.zero () in
+  Visualization.plot_bloch q0 ();
